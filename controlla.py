@@ -4,8 +4,11 @@ Push physical buttons to seek through spotify tracks
 
 NOTES
     1. What spotipy command to seek through tracks - DONE
-    2. How to http it
-    3. Wifi connect the pico and http it
+    2. How to http it                              - DONE
+    3. Wifi connect the pico and http it           - DONE, but...
+                                                    i wanna revise w a program that doesnt depend
+                                                    on my laptop as an http host middleman. this 
+                                                    isnt that. see 'strongIndependentPico'
 """
 
 import spotipy
