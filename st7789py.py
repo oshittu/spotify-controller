@@ -1,3 +1,4 @@
+# ai wrote this. i couldnt find a library...
 # Save this exact code block entirely inside a file named st7789py.py on your Pico
 import time
 import ustruct

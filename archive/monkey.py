@@ -1,6 +1,5 @@
-#control monkeys with a joystick
+# control monkeys with a joystick
 
-# import urequests
 import machine
 import time
 from machine import Pin, SPI

@@ -1,4 +1,13 @@
+if done well this can be MODERN DAY IPOD!!! 
 currently this awesome project displays a cute monkey
+
+Quick Start (only start Lol)
+1. assemble hardware
+2. start fast api server copy paste this into powershell
+    uvicorn fartify:app --host 0.0.0.0 --port 5000
+3. connect pico to wifi if you havent already by running picowifi.py
+4. run picoPart.py on the pico
+5. eureka 
 
 TOMI TODO
 > Up and down control volume
@@ -6,3 +15,14 @@ TOMI TODO
 
 Later
 > Digital interface
+
+V1
+    1. Physical assembly                    - DONE
+        > Previous and next buttons
+        > Screen integration (for fun)
+    2. Spotify, Wireless Integration        - DONE
+    3. (optional) Graphic interface         - Monkey Done, real work TBD
+
+V2
+1. Pico can connect to spotify independently without my http host
+2. MAKE A PROGRAM TO DEAL WITH WIFI CUTOUTS AND RECONNECTION

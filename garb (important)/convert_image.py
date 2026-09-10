@@ -1,4 +1,17 @@
-#ai wrote this idc
+# Convert a PNG into raw RGB565 bytes for the Pico ST7789 display.
+#
+# First-time setup on the computer:
+#     python -m pip install Pillow
+#
+# Run from this folder:
+#     python convert_image.py input.png output.bin
+#
+# Example:
+#     python convert_image.py monkey-thought.png monkey-thought-240x320.bin
+#
+# The output must be copied to the Pico. It should be exactly 153600 bytes
+# because the display is 240 x 320 pixels and each RGB565 pixel uses 2 bytes.
+
 from pathlib import Path
 import argparse
 
