@@ -1,6 +1,6 @@
 awesome vibe coded project #2
 if done well this can be MODERN DAY IPOD!!! 
-currently this awesome project displays a cute monkey while controlling spotify playback (CURRENT VERSION: V2)
+currently this awesome project displays a cute monkey while controlling spotify playback (CURRENT VERSION: V3)
 
 Quick Start (only start Lol)
 1. assemble hardware
