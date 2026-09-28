@@ -30,3 +30,12 @@ V2
     3. make an actually good graphic interface
         > how do i deal with scene switching etc? looking for a good library...
         > A: smtg like a state machine? 
+
+V3 
+    1. NEW Physical Assembly with Protoboard (no breadboard)    - DONE
+    2. NEW Graphic Interface (State Machines)
+        > Plan out 2-3 first layouts
+        > implement
+        > I want a pixel mapping app/interface that i can use to design my thing pixel by pixel 
+          (and import photos etc) and then it'll output the pixel string or wtv it is
+    3. CLEAN UP FILE STRUCTURE OMG

@@ -1,4 +1,6 @@
 # ai wrote this. i couldnt find a library...
+# i found russhughes/st7789_mpy library so ill prolly switch to that and archive this
+
 # Save this exact code block entirely inside a file named st7789py.py on your Pico
 import time
 import ustruct

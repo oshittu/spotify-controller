@@ -28,8 +28,13 @@ rst = Pin(16, Pin.IN)   # reset pin, white
 dc = Pin(20, Pin.OUT)   # Data/Command, purple
 cs = Pin(17, Pin.OUT)   # Chip select. Tells the display to listen to the SPI bus, yellow
 
-red = Pin(15, Pin.IN)
-blue = Pin(14, Pin.IN)
+# buttons r numbered left to right, top row then bottom row
+b0 = Pin(10, Pin.IN, machine.Pin.PULL_DOWN) # top left corner button
+b1 = Pin(11, Pin.IN, machine.Pin.PULL_DOWN)
+b2 = Pin(12, Pin.IN, machine.Pin.PULL_DOWN) # top right corner button
+b3 = Pin(13, Pin.IN, machine.Pin.PULL_DOWN) # bottom left button
+b4 = Pin(14, Pin.IN, machine.Pin.PULL_DOWN)
+b5 = Pin(15, Pin.IN, machine.Pin.PULL_DOWN)
 
 wif = 240
 haiit = 320

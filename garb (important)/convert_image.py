@@ -1,3 +1,4 @@
+# ai wrote this
 # Convert a PNG into raw RGB565 bytes for the Pico ST7789 display.
 #
 # First-time setup on the computer:
