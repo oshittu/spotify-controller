@@ -129,6 +129,7 @@ state_machine = {
     PAGE_SCREENSAVER: run_screensaver
 }
 
-while True:
-    state_machine[current_page]()
-    time.sleep(0.01)
+def run():
+    while True:
+        state_machine[current_page]()
+        time.sleep(0.01)

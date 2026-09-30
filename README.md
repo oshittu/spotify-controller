@@ -7,8 +7,11 @@ Quick Start (only start Lol)
 2. start fast api server copy paste this into powershell
     uvicorn APIcontrolla:app --host 0.0.0.0 --port 5000
 3. connect pico to wifi if you havent already by running picowifi.py
-4. run picoPart.py on the pico
-5. eureka 
+4. upload relevant files to pico
+    > STATEMACHINE.py
+    > picowifi.py
+5. run main.py on the pico
+6. eureka 
 
 V1
     1. Physical assembly                    - DONE
