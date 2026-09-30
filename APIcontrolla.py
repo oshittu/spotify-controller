@@ -91,6 +91,22 @@ def getAlbumID():
     albumID = playback["item"]["album"]["id"]
     return albumID
 
+@app.get("/getCurrentSong")
+def getCurrentSong():
+    # playback = sp.current_user_playing_track()
+    # song = playback["item"]["name"]
+    # return song
+
+    playing = sp.currently_playing()
+    song = playing["item"]["name"]
+    return song
+
+@app.get("/getUser")
+def getUser():
+    player = sp.current_user()
+    userID = player["display_name"]
+    return userID
+
 @app.get("/covers/{album_id}/{size}")
 def getAlbumCover(album_id: str, size: int):
     if size not in (64, 200):

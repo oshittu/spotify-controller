@@ -267,5 +267,3 @@ def drawScreensaver():
     # # if not(ALBUMCOVERS.albums[albumID]):
     # #     convert_cover.convert_current_album()
     # #     time.sleep(0.5)
-
-drawScreensaver()

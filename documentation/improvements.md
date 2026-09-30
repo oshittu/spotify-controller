@@ -2,6 +2,7 @@ potential areas for improvement
 
 BLOCKING ISSUES RN
 1. When the API is called and there's no wifi. make a wifi try/catch or smtg
+2. i think urequests is making me run out of memory T_T
 
 GOOD PRACTICE IDEAS
 1. Make a spotify api call try/catch

@@ -1,5 +1,5 @@
 import picowifi
 import HARDWARE, STATEMACHINE
 
-picowifi.connect()
+#picowifi.connect()
 STATEMACHINE.run()

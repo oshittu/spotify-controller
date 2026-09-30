@@ -1,6 +1,6 @@
 import SYMSCENE
 import time
-import HARDWARE, urequests
+import HARDWARE, urequests, gc
 
 PAGE_HOME = 0
 PAGE_SETTINGS = 1
@@ -11,6 +11,7 @@ SERVER = "http://192.168.1.78:5000"
 
 current_page = PAGE_SCREENSAVER
 page_just_changed = True
+currentSong = None
 
 
 def run_home():
@@ -65,13 +66,14 @@ def run_queue():
         time.sleep(0.2)
 
 def run_screensaver():
-    global current_page, page_just_changed  # mandatory declaration
+    global current_page, page_just_changed, currentSong  # mandatory declaration
     #background_check()
     #HARDWARE.testButtons()
     
     if page_just_changed:
         SYMSCENE.drawScreensaver()
         page_just_changed = False
+        gc.collect()
 
     # button press handling
     if HARDWARE.b0.value():
@@ -93,6 +95,8 @@ def run_screensaver():
         time.sleep(0.2)
 
     if HARDWARE.b4.value():
+        # trigger redraw (song change)
+        page_just_changed = True
         time.sleep(0.2)
 
     if HARDWARE.b5.value():
@@ -101,27 +105,40 @@ def run_screensaver():
         # page_just_changed = True
         # time.sleep(0.2)
     
-    
 def background_check():
     global current_page, page_just_changed  # mandatory declaration
+    # i think that the background check will have to be threaded and concurrent
 
     # checkSpotifyConnectivity()
     # checkWifiConnectivity()
-    checkSongChange() # to trigger cover change
+    # checkSongChange() # to trigger cover change
     
-
 def checkSpotifyConnectivity():
     # run a simple spotify api call over and over til its connected
     pass
 
-def checkSongChange():
-    currentSong = apicall()
+def checkSongChange(currentSong):
+    
+#     while(True):
+#         songPlaying = urequests.get(SERVER + "/getCurrentSong")
+#         if currentSong is not songPlaying:
+#             return True
+#         else:
+#             return False
+    pass
 
-    while(True):
-        songPlaying = apicall()
-        if currentSong is not songPlaying:
-            return True
-        time.sleep(5)
+def testSpotipyAccess():
+    print("attempting spotipy connection...")
+    for attempt in range(5):
+        user = urequests.get(SERVER + "/getUser")
+        if(user == "toeme"):
+            print("successfully accessed spotipy")
+            break
+        else:
+            print(user)
+        time.sleep(2)
+    else:
+        print("failed to connect to spotipy")
 
 state_machine = {
     PAGE_HOME: run_home,
