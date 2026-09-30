@@ -43,4 +43,4 @@ display = st7789.ST7789(
 
 def testButtons():
     print(f"b0: {b0.value()} \nb1: {b1.value()} \nb2: {b2.value()} \nb3: {b3.value()} \nb4: {b4.value()} \nb5: {b5.value()}\n")
-    time.sleep(1)
+    time.sleep(0.5)

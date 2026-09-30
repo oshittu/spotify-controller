@@ -1,3 +1,6 @@
 import picowifi
 import butMonkey
-import HARDWARE
+import HARDWARE, STATEMACHINE
+
+picowifi.connect()
+STATEMACHINE.run_home()

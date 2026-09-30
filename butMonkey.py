@@ -4,7 +4,7 @@ import urequests
 import machine
 import time
 from machine import Pin, SPI
-import st7789py as st7789
+import archive.st7789py as st7789
 
 SERVER = "http://192.168.1.78:5000"
 

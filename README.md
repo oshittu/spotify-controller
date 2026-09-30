@@ -5,17 +5,10 @@ currently this awesome project displays a cute monkey while controlling spotify 
 Quick Start (only start Lol)
 1. assemble hardware
 2. start fast api server copy paste this into powershell
-    uvicorn fartify:app --host 0.0.0.0 --port 5000
+    uvicorn APIcontrolla:app --host 0.0.0.0 --port 5000
 3. connect pico to wifi if you havent already by running picowifi.py
 4. run picoPart.py on the pico
 5. eureka 
-
-TOMI TODO
-> Up and down control volume
-> left and right skip song
-
-Later
-> Digital interface
 
 V1
     1. Physical assembly                    - DONE
